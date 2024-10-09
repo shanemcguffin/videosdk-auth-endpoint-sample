@@ -1,4 +1,3 @@
-import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import { KJUR } from 'jsrsasign'
@@ -15,9 +14,6 @@ import {
 dotenv.config()
 const app = express()
 const port = process.env.PORT || 4000
-
-app.use(express.json(), cors())
-app.options('*', cors())
 
 // Validations should match Zoom Video SDK's documentation:
 // https://developers.zoom.us/docs/video-sdk/auth/#payload
